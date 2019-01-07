@@ -1,0 +1,40 @@
+{
+  "name": "enius/bitly",
+  "description": "PHP Library based on Guzzle to consume Bit.ly API",
+  "keywords": [
+    "Bitly",
+    "api",
+    "guzzle"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Johnny John Huirilef Millan",
+      "email": "johnny@codelovers.cl"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.4",
+    "symfony/var-dumper": "^4.1",
+    "symfony/dotenv": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Enius\\Bitly\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Enius\\Bitly\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
