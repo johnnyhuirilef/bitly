@@ -82,8 +82,8 @@ class Bitly
      */
     static function checkResponseStatusCodeError(ResponseInterface $response): void
     {
-        if ($response->getStatusCode() !== 200) {
-            throw new BitlyResponseStatusCodeError('Bitly Status Code:'.$response->getStatusCode()." - ");
+        if (!in_array($response->getStatusCode(), [200, 201])) {
+            throw new BitlyResponseStatusCodeError('Bitly Status Code:' . $response->getStatusCode() . " - " . $response->getStatusResponse());
         }
     }
 }
